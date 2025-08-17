@@ -3,110 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - ListCraft</title>
+    <title>Privacy Policy - ShoppingList - FamilySync</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #2C2E3B;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #F4F0EF;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
         .header {
             text-align: center;
-            margin-bottom: 40px;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 60px;
+            padding: 60px 40px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        
         .header h1 {
-            color: #3F6B4E;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3.2em;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
+        
         .header p {
-            color: #B89F4E;
-            margin: 10px 0 0 0;
-            font-size: 1.1em;
+            color: #6b7280;
+            margin: 20px 0 0 0;
+            font-size: 1.3em;
+            font-weight: 400;
         }
+        
         .section {
-            background: white;
-            margin: 20px 0;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        
         h2 {
-            color: #3F6B4E;
-            border-bottom: 2px solid #B89F4E;
-            padding-bottom: 10px;
-            margin-top: 0;
+            color: #1a1a1a;
+            font-size: 1.8em;
+            font-weight: 600;
+            margin: 0 0 25px 0;
+            padding-bottom: 15px;
+            border-bottom: 3px solid transparent;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            background-size: 100% 3px;
+            background-repeat: no-repeat;
+            background-position: 0 100%;
         }
+        
         h3 {
-            color: #2C2E3B;
-            margin-top: 25px;
+            color: #374151;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
         }
+        
         ul {
-            padding-left: 20px;
+            padding-left: 0;
+            list-style: none;
         }
+        
         li {
-            margin: 8px 0;
+            margin: 15px 0;
+            padding: 12px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
         }
+        
+        li:hover {
+            background: #f1f5f9;
+            transform: translateX(5px);
+        }
+        
+        strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+        
         .highlight {
-            background-color: #B89F4E;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+            display: inline-block;
         }
+        
         .contact {
-            background: linear-gradient(135deg, #3F6B4E, #2C2E3B);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
             text-align: center;
         }
+        
         .contact h2 {
             color: white;
-            border-bottom: 2px solid #B89F4E;
+            background: none;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
         }
+        
         .contact a {
-            color: #B89F4E;
+            color: #fbbf24;
             text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
+        
+        .contact a:hover {
+            color: #f59e0b;
+        }
+        
         .footer {
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #666;
-            font-size: 0.9em;
+            margin-top: 60px;
+            padding: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95em;
         }
+        
         .effective-date {
-            background: #B89F4E;
+            background: linear-gradient(135deg, #10b981, #059669);
             color: white;
-            padding: 15px;
-            border-radius: 8px;
+            padding: 20px;
+            border-radius: 16px;
             text-align: center;
-            font-weight: bold;
-            margin-bottom: 30px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.2);
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #764ba2;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .header {
+                padding: 40px 25px;
+                margin-bottom: 40px;
+            }
+            
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .section {
+                padding: 25px;
+                margin: 20px 0;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>ListCraft</h1>
-        <p>Privacy Policy</p>
-    </div>
+    <div class="container">
+        <div class="header">
+            <h1>ShoppingList - FamilySync</h1>
+            <p>Privacy Policy</p>
+        </div>
 
-    <div class="effective-date">
-        Effective Date: December 15, 2024
-    </div>
+        <div class="effective-date">
+            Effective Date: August 15, 2025
+        </div>
 
     <div class="section">
         <h2>Our Commitment to Your Privacy</h2>
-        <p>At <strong>NeoLabsLtd</strong>, we take your privacy seriously. This Privacy Policy explains how ListCraft ("we," "our," or "us") collects, uses, and protects your information when you use our shopping list application.</p>
-        <p>ListCraft is designed with <span class="highlight">privacy by design</span> - we collect only the minimum data necessary to provide you with an excellent shopping experience.</p>
+        <p>At <strong>NeoLabsLtd</strong>, we take your privacy seriously. This Privacy Policy explains how ShoppingList - FamilySync ("we," "our," or "us") collects, uses, and protects your information when you use our shopping list application.</p>
+        <p>ShoppingList - FamilySync is designed with <span class="highlight">privacy by design</span> - we collect only the minimum data necessary to provide you with an excellent shopping experience.</p>
     </div>
 
     <div class="section">
@@ -126,11 +237,18 @@
             <li><strong>Technical Data:</strong> Crash reports, performance metrics, and error logs</li>
         </ul>
 
-        <h3>Family Sync Information (Premium Feature):</h3>
+        <h3>Family Sync Information:</h3>
         <ul>
             <li><strong>Anonymous Device ID:</strong> Unique identifier for device synchronization</li>
             <li><strong>Family Code:</strong> Temporary sharing codes for list collaboration</li>
             <li><strong>Shared List Data:</strong> Shopping items and changes shared with family members</li>
+        </ul>
+
+        <h3>Advertising Information:</h3>
+        <ul>
+            <li><strong>Advertising ID:</strong> Anonymous identifier for ad personalization</li>
+            <li><strong>Ad Interaction Data:</strong> Clicks, views, and engagement metrics</li>
+            <li><strong>General Demographics:</strong> Age range and general location for relevant ads</li>
         </ul>
     </div>
 
@@ -140,7 +258,7 @@
             <li><strong>Core Functionality:</strong> Manage your shopping lists, sync across devices, and provide app features</li>
             <li><strong>Smart Suggestions:</strong> Learn from your shopping patterns to suggest frequently used items</li>
             <li><strong>App Improvement:</strong> Analyze usage patterns to improve features and fix bugs</li>
-            <li><strong>Premium Services:</strong> Process subscription payments and provide premium features</li>
+            <li><strong>Advertising:</strong> Display relevant advertisements and measure ad performance</li>
             <li><strong>Customer Support:</strong> Respond to your questions and provide technical assistance</li>
         </ul>
     </div>
@@ -152,7 +270,8 @@
         <h3>Service Providers:</h3>
         <ul>
             <li><strong>Firebase (Google):</strong> Analytics, database, and authentication services</li>
-            <li><strong>Google Play Billing:</strong> Premium subscription processing</li>
+            <li><strong>AdMob (Google):</strong> Advertisement serving and analytics</li>
+            <li><strong>Ad Networks:</strong> Third-party advertising partners for ad delivery</li>
         </ul>
 
         <h3>Legal Requirements:</h3>
@@ -193,24 +312,26 @@
             <li><strong>Analytics Data:</strong> Retained for up to 26 months (Firebase Analytics default)</li>
             <li><strong>Voice Recordings:</strong> Processed locally and not stored on our servers</li>
             <li><strong>Family Sync Data:</strong> Deleted when you leave family sharing or delete your account</li>
-            <li><strong>Subscription Data:</strong> Retained as required by tax and financial regulations</li>
+            <li><strong>Advertising Data:</strong> Retained according to advertising partner policies (typically 12-24 months)</li>
         </ul>
     </div>
 
     <div class="section">
-        <h2>Premium Subscriptions</h2>
-        <p>Our premium features are processed through Google Play Billing:</p>
+        <h2>Advertising</h2>
+        <p>ShoppingList - FamilySync is supported by advertising revenue to keep the app free for all users:</p>
         <ul>
-            <li><strong>Pricing:</strong> $2.49/month or $21.99/year</li>
-            <li><strong>Family Sharing:</strong> One premium subscription covers up to 4 family members</li>
-            <li><strong>Billing Data:</strong> Handled entirely by Google Play - we do not store payment information</li>
-            <li><strong>Cancellation:</strong> Manage subscriptions through your Google Play account</li>
+            <li><strong>Ad Types:</strong> Banner ads, interstitial ads, and rewarded video ads</li>
+            <li><strong>Ad Personalization:</strong> Ads may be personalized based on your interests and usage patterns</li>
+            <li><strong>Third-Party Ads:</strong> We work with advertising partners who may collect data for ad targeting</li>
+            <li><strong>Opt-Out:</strong> You can limit ad tracking through your device settings</li>
+            <li><strong>Ad-Free Experience:</strong> Currently not available - app is fully supported by ads</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>Children's Privacy</h2>
-        <p>ListCraft is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately so we can delete it.</p>
+        <p>ShoppingList - FamilySync is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately so we can delete it.</p>
+        <p><strong>Note:</strong> Our advertising partners also comply with COPPA regulations and do not serve targeted ads to children under 13.</p>
     </div>
 
     <div class="section">
@@ -251,10 +372,11 @@
 
     <div class="section">
         <h2>Third-Party Services</h2>
-        <p>ListCraft integrates with the following third-party services, each with their own privacy policies:</p>
+        <p>ShoppingList - FamilySync integrates with the following third-party services, each with their own privacy policies:</p>
         <ul>
             <li><strong>Firebase Analytics:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
-            <li><strong>Google Play Billing:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+            <li><strong>AdMob:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+            <li><strong>Advertising Partners:</strong> Various ad networks with their respective privacy policies</li>
         </ul>
         <p>We encourage you to review these policies to understand how these services handle your data.</p>
     </div>
@@ -267,9 +389,10 @@
         <p>We will respond to your inquiry within 30 days.</p>
     </div>
 
-    <div class="footer">
-        <p>&copy; 2024 NeoLabsLtd. All rights reserved.<br>
-        ListCraft - Making shopping simple and collaborative.</p>
+        <div class="footer">
+            <p>&copy; 2024 NeoLabsLtd. All rights reserved.<br>
+            ShoppingList - FamilySync - Making shopping simple and collaborative.</p>
+        </div>
     </div>
 </body>
 </html>
